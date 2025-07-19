@@ -5,6 +5,7 @@ import AchievementsSection from "@/components/achievements-section";
 import ExpertiseSection from "@/components/expertise-section";
 import TimelineSection from "@/components/timeline-section";
 import AwardsSection from "@/components/awards-section";
+import BlogSection from "@/components/blog-section";
 import ContactSection from "@/components/contact-section";
 
 
@@ -29,6 +30,7 @@ export default function Home() {
       <ExpertiseSection />
       <TimelineSection />
       <AwardsSection />
+      <BlogSection />
       <ContactSection />
       
       {/* Footer */}

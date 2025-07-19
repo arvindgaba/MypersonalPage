@@ -94,6 +94,57 @@ export async function registerRoutes(app: Express): Promise<Server> {
     }
   });
 
+  // RSS Blog Posts endpoint
+  app.get('/api/blog-posts', async (req, res) => {
+    try {
+      const rssUrl = 'https://arvindgaba.com/feed/';
+      const response = await fetch(rssUrl);
+      
+      if (!response.ok) {
+        throw new Error(`RSS fetch failed: ${response.status}`);
+      }
+      
+      const xmlText = await response.text();
+      
+      // Parse RSS XML - simple extraction for title, link, pubDate, description, and image
+      const posts = [];
+      const itemMatches = xmlText.match(/<item[^>]*>[\s\S]*?<\/item>/gi) || [];
+      
+      for (const item of itemMatches.slice(0, 5)) {
+        const title = item.match(/<title[^>]*><!\[CDATA\[(.*?)\]\]><\/title>/)?.[1] 
+          || item.match(/<title[^>]*>(.*?)<\/title>/)?.[1] || 'Untitled';
+        
+        const link = item.match(/<link[^>]*>(.*?)<\/link>/)?.[1] 
+          || item.match(/<guid[^>]*>(.*?)<\/guid>/)?.[1] || '';
+        
+        const pubDate = item.match(/<pubDate[^>]*>(.*?)<\/pubDate>/)?.[1] || '';
+        
+        const description = item.match(/<description[^>]*><!\[CDATA\[(.*?)\]\]><\/description>/)?.[1]
+          || item.match(/<description[^>]*>(.*?)<\/description>/)?.[1] || '';
+        
+        // Look for images in content or media tags
+        const imageMatch = item.match(/<media:content[^>]+url="([^"]+)"/i) 
+          || item.match(/<enclosure[^>]+url="([^"]+)"[^>]+type="image/i)
+          || description.match(/<img[^>]+src="([^"]+)"/i);
+        
+        const image = imageMatch?.[1] || null;
+        
+        posts.push({
+          title: title.trim(),
+          link: link.trim(),
+          pubDate: pubDate.trim(),
+          description: description.trim(),
+          ...(image && { image: image })
+        });
+      }
+      
+      res.json(posts);
+    } catch (error) {
+      console.error('RSS fetch error:', error);
+      res.status(500).json({ error: 'Failed to fetch blog posts' });
+    }
+  });
+
   // Download resume endpoint
   app.get("/api/resume/download", async (req, res) => {
     try {
