@@ -182,12 +182,14 @@ export default function ContactSection() {
                             <SelectValue placeholder="Select a subject" />
                           </SelectTrigger>
                         </FormControl>
-                        <SelectContent className="bg-slate-800 border-slate-600">
-                          <SelectItem value="Technology Leadership Opportunity">Technology Leadership Opportunity</SelectItem>
-                          <SelectItem value="Strategic Partnership Discussion">Strategic Partnership Discussion</SelectItem>
-                          <SelectItem value="Consulting Inquiry">Consulting Inquiry</SelectItem>
-                          <SelectItem value="Industry Collaboration">Industry Collaboration</SelectItem>
-                          <SelectItem value="Speaking Engagement">Speaking Engagement</SelectItem>
+                        <SelectContent className="bg-slate-800 border-slate-600 text-slate-100">
+                          <SelectItem value="Technology Leadership Opportunity" className="text-slate-100 focus:bg-slate-700 focus:text-cyan-400">Technology Leadership Opportunity</SelectItem>
+                          <SelectItem value="Strategic Partnership Discussion" className="text-slate-100 focus:bg-slate-700 focus:text-cyan-400">Strategic Partnership Discussion</SelectItem>
+                          <SelectItem value="AI Agent Development & Consulting" className="text-slate-100 focus:bg-slate-700 focus:text-cyan-400">AI Agent Development & Consulting</SelectItem>
+                          <SelectItem value="Microsoft CoPilot Studio Implementation" className="text-slate-100 focus:bg-slate-700 focus:text-cyan-400">Microsoft CoPilot Studio Implementation</SelectItem>
+                          <SelectItem value="Consulting Inquiry" className="text-slate-100 focus:bg-slate-700 focus:text-cyan-400">Consulting Inquiry</SelectItem>
+                          <SelectItem value="Industry Collaboration" className="text-slate-100 focus:bg-slate-700 focus:text-cyan-400">Industry Collaboration</SelectItem>
+                          <SelectItem value="Speaking Engagement" className="text-slate-100 focus:bg-slate-700 focus:text-cyan-400">Speaking Engagement</SelectItem>
                         </SelectContent>
                       </Select>
                       <FormMessage />

@@ -1,8 +1,11 @@
 export default function ExpertiseSection() {
   const skills = [
     { name: "Cloud Platforms (Azure, O365)", level: 95, color: "from-cyan-400 to-purple-400" },
+    { name: "Agentic AI & Microsoft CoPilot Studio", level: 94, color: "from-purple-400 to-pink-500" },
     { name: "Enterprise Architecture", level: 92, color: "from-purple-400 to-yellow-500" },
-    { name: "AI & Process Automation", level: 88, color: "from-yellow-500 to-cyan-400" },
+    { name: "Infrastructure & Network Security", level: 93, color: "from-red-500 to-orange-500" },
+    { name: "Cybersecurity & Compliance (ISO 27001)", level: 91, color: "from-orange-500 to-red-600" },
+    { name: "AI Automation (N8N, Process Mining)", level: 88, color: "from-yellow-500 to-cyan-400" },
     { name: "ERP/CRM (SAP, Dynamics 365)", level: 90, color: "from-blue-600 to-cyan-400" },
     { name: "Team Leadership & Strategy", level: 96, color: "from-purple-400 to-blue-600" }
   ];
@@ -63,6 +66,20 @@ export default function ExpertiseSection() {
       icon: "fas fa-cloud",
       color: "from-yellow-500/20 to-blue-600/20",
       borderColor: "border-yellow-500/30"
+    },
+    {
+      title: "AI Agent Development",
+      subtitle: "CoPilot Studio & N8N Expert",
+      icon: "fas fa-robot",
+      color: "from-purple-400/20 to-pink-500/20",
+      borderColor: "border-purple-400/30"
+    },
+    {
+      title: "Cybersecurity Framework",
+      subtitle: "ISO 27001 & Security Best Practices",
+      icon: "fas fa-shield-alt",
+      color: "from-red-500/20 to-orange-500/20",
+      borderColor: "border-red-500/30"
     }
   ];
 

@@ -73,6 +73,13 @@ export class MemStorage implements IStorage {
         section: "achievements",
         content: [
           {
+            title: "Agentic AI & CoPilot Studio",
+            subtitle: "Microsoft CoPilot Studio & N8N Expert",
+            description: "Developed intelligent AI agents using Microsoft CoPilot Studio for HR processes, reducing response time by 70% and automating 85% of routine inquiries.",
+            metrics: ["70% Faster", "85% Automated"],
+            icon: "brain"
+          },
+          {
             title: "AI Virtual Advisor",
             subtitle: "WhatsApp Business Integration",
             description: "Implemented AI-powered Retail Virtual Advisor Agent with CRM integration, achieving 15% increase in qualified leads and 30% reduction in call center volume.",
@@ -87,9 +94,16 @@ export class MemStorage implements IStorage {
             icon: "cloud"
           },
           {
+            title: "Infrastructure & Cybersecurity",
+            subtitle: "Network Security & ISO 27001",
+            description: "Implemented comprehensive cybersecurity framework with network security controls, achieving ISO 27001 compliance and zero security incidents.",
+            metrics: ["ISO 27001", "Zero Incidents"],
+            icon: "shield-alt"
+          },
+          {
             title: "Process Automation",
-            subtitle: "RPA & Intelligent Workflows",
-            description: "Implemented RPA and intelligent workflows reducing manual effort by 20% and HR support tickets by 40% through bilingual process automation.",
+            subtitle: "N8N & RPA Workflows",
+            description: "Implemented RPA and N8N intelligent workflows reducing manual effort by 20% and HR support tickets by 40% through bilingual process automation.",
             metrics: ["-20% Manual Effort", "-40% HR Tickets"],
             icon: "cogs"
           },

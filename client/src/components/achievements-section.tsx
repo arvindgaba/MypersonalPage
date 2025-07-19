@@ -21,6 +21,7 @@ export default function AchievementsSection() {
 
   const getIconClass = (icon: string) => {
     const iconMap: Record<string, string> = {
+      'brain': 'fas fa-brain',
       'robot': 'fas fa-robot',
       'cloud': 'fas fa-cloud',
       'cogs': 'fas fa-cogs',

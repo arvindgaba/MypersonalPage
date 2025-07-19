@@ -43,9 +43,14 @@ export default function HeroSection() {
             {profileData?.name || "Arvind Gaba"}
           </h1>
           
-          <h2 className="text-2xl md:text-3xl text-slate-300 mb-6 font-light">
+          <h2 className="text-2xl md:text-3xl text-slate-300 mb-4 font-light">
             {profileData?.title || "Digital Technology & AI Transformation Leader"}
           </h2>
+          
+          <div className="text-lg text-purple-300 mb-6 font-semibold">
+            <i className="fas fa-brain text-pink-400 mr-2"></i>
+            Agentic AI Specialist | Microsoft CoPilot Studio Expert | N8N Automation Architect
+          </div>
           
           <p className="text-lg md:text-xl text-slate-400 mb-8 max-w-3xl mx-auto leading-relaxed">
             {heroData?.description || "Accomplished IT leader with over 20 years of global experience driving digital transformation, enterprise architecture strategy, and high-performance IT operations across complex, multinational organizations."}

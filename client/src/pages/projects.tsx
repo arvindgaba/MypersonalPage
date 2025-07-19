@@ -20,6 +20,21 @@ const projectsData = [
     gradient: "from-purple-600 to-cyan-500"
   },
   {
+    id: 13,
+    category: "Agentic AI Development",
+    title: "Microsoft CoPilot Studio & N8N AI Agents",
+    description: "Developed intelligent AI agents using Microsoft CoPilot Studio for HR processes and N8N for workflow automation, creating bilingual conversational interfaces.",
+    businessImpact: "Reduced HR response time by 70%, automated 85% of routine inquiries, improved employee satisfaction with 24/7 AI support",
+    technologies: ["Microsoft CoPilot Studio", "N8N Workflow Automation", "Azure Cognitive Services", "Natural Language Processing"],
+    metrics: {
+      responseTime: "70% Faster",
+      automation: "85%",
+      availability: "24/7"
+    },
+    icon: "brain",
+    gradient: "from-pink-500 to-violet-600"
+  },
+  {
     id: 2,
     category: "Low-Code Platform",
     title: "Enterprise Low-Code Ecosystem",
@@ -199,7 +214,8 @@ const getIconClass = (icon: string) => {
     'database': 'fas fa-database',
     'users': 'fas fa-users',
     'route': 'fas fa-route',
-    'file-invoice': 'fas fa-file-invoice'
+    'file-invoice': 'fas fa-file-invoice',
+    'brain': 'fas fa-brain'
   };
   return iconMap[icon] || 'fas fa-project-diagram';
 };
