@@ -1,0 +1,95 @@
+export default function ExpertiseSection() {
+  const skills = [
+    { name: "Cloud Platforms (Azure, O365)", level: 95, color: "from-cyan-400 to-purple-400" },
+    { name: "Enterprise Architecture", level: 92, color: "from-purple-400 to-yellow-500" },
+    { name: "AI & Process Automation", level: 88, color: "from-yellow-500 to-cyan-400" },
+    { name: "ERP/CRM (SAP, Dynamics 365)", level: 90, color: "from-blue-600 to-cyan-400" },
+    { name: "Team Leadership & Strategy", level: 96, color: "from-purple-400 to-blue-600" }
+  ];
+
+  const certifications = [
+    {
+      title: "Azure Solutions Architect",
+      subtitle: "Microsoft Certified Expert",
+      icon: "fab fa-microsoft",
+      color: "from-blue-600/20 to-cyan-400/20",
+      borderColor: "border-cyan-400/30"
+    },
+    {
+      title: "ITIL v4 Foundation", 
+      subtitle: "AXELOS Certified",
+      icon: "fas fa-certificate",
+      color: "from-purple-400/20 to-yellow-500/20",
+      borderColor: "border-purple-400/30"
+    },
+    {
+      title: "Certified AI Expert",
+      subtitle: "Google AI & LLM",
+      icon: "fas fa-robot",
+      color: "from-yellow-500/20 to-blue-600/20",
+      borderColor: "border-yellow-500/30"
+    },
+    {
+      title: "ISO 27001 & 20001",
+      subtitle: "Security & Service Mgmt",
+      icon: "fas fa-shield-alt",
+      color: "from-cyan-400/20 to-purple-400/20",
+      borderColor: "border-cyan-400/30"
+    }
+  ];
+
+  return (
+    <section id="expertise" className="py-20 bg-gradient-to-br from-slate-900 to-slate-800">
+      <div className="container mx-auto px-6">
+        <div className="text-center mb-16">
+          <h2 className="text-4xl md:text-5xl font-bold mb-6 text-gradient">
+            Technology Expertise Matrix
+          </h2>
+          <p className="text-xl text-slate-400 max-w-2xl mx-auto">
+            Comprehensive technology leadership across enterprise platforms, cloud infrastructure, and emerging technologies
+          </p>
+        </div>
+        
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
+          {/* Skills Matrix */}
+          <div className="glass-effect rounded-2xl p-8">
+            <h3 className="text-2xl font-semibold mb-6 text-cyan-400">Core Technology Stack</h3>
+            <div className="space-y-6">
+              {skills.map((skill, index) => (
+                <div key={index} className="skill-item">
+                  <div className="flex justify-between mb-2">
+                    <span className="text-slate-200">{skill.name}</span>
+                    <span className="text-yellow-500">Expert</span>
+                  </div>
+                  <div className="w-full bg-slate-700 rounded-full h-2">
+                    <div 
+                      className={`bg-gradient-to-r ${skill.color} h-2 rounded-full transition-all duration-1000`}
+                      style={{ width: `${skill.level}%` }}
+                    ></div>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+          
+          {/* Certifications */}
+          <div className="glass-effect rounded-2xl p-8">
+            <h3 className="text-2xl font-semibold mb-6 text-cyan-400">Professional Certifications</h3>
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+              {certifications.map((cert, index) => (
+                <div 
+                  key={index}
+                  className={`bg-gradient-to-br ${cert.color} p-4 rounded-lg border ${cert.borderColor}`}
+                >
+                  <i className={`${cert.icon} text-cyan-400 text-2xl mb-2`}></i>
+                  <h4 className="font-semibold text-slate-200">{cert.title}</h4>
+                  <p className="text-slate-400 text-sm">{cert.subtitle}</p>
+                </div>
+              ))}
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  );
+}
