@@ -1,4 +1,6 @@
 import { useQuery } from "@tanstack/react-query";
+import { Link } from "wouter";
+import { Button } from "@/components/ui/button";
 
 export default function AchievementsSection() {
   const { data: achievements, isLoading } = useQuery({
@@ -36,9 +38,15 @@ export default function AchievementsSection() {
           <h2 className="text-4xl md:text-5xl font-bold mb-6 text-gradient">
             AI-Powered Achievements
           </h2>
-          <p className="text-xl text-slate-400 max-w-2xl mx-auto">
+          <p className="text-xl text-slate-400 max-w-2xl mx-auto mb-8">
             Strategic initiatives delivering measurable business impact through innovative technology solutions
           </p>
+          <Link href="/projects">
+            <Button className="px-6 py-3 neural-gradient hover:opacity-90 rounded-xl text-white font-semibold transition-all transform hover:scale-105 shadow-lg">
+              <i className="fas fa-rocket mr-2"></i>
+              View All Projects & Business Impact
+            </Button>
+          </Link>
         </div>
         
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">

@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Menu, X } from "lucide-react";
+import { Link } from "wouter";
 
 export default function Navigation() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -46,6 +47,12 @@ export default function Navigation() {
           >
             Timeline
           </button>
+          <Link
+            href="/projects"
+            className="hover:text-cyan-400 transition-colors"
+          >
+            Projects
+          </Link>
           <button 
             onClick={() => scrollToSection('contact')}
             className="hover:text-cyan-400 transition-colors"
@@ -95,6 +102,12 @@ export default function Navigation() {
             >
               Timeline
             </button>
+            <Link
+              href="/projects"
+              className="block w-full text-left hover:text-cyan-400 transition-colors"
+            >
+              Projects
+            </Link>
             <button 
               onClick={() => scrollToSection('contact')}
               className="block w-full text-left hover:text-cyan-400 transition-colors"
