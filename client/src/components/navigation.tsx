@@ -2,11 +2,7 @@ import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Menu, X } from "lucide-react";
 
-interface NavigationProps {
-  onAdminToggle?: () => void;
-}
-
-export default function Navigation({ onAdminToggle }: NavigationProps) {
+export default function Navigation() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   const scrollToSection = (id: string) => {
@@ -67,17 +63,6 @@ export default function Navigation({ onAdminToggle }: NavigationProps) {
             onClick={() => setIsMenuOpen(!isMenuOpen)}
           >
             {isMenuOpen ? <X size={20} /> : <Menu size={20} />}
-          </Button>
-
-          {/* Admin Button */}
-          <Button
-            variant="outline"
-            size="sm"
-            onClick={onAdminToggle}
-            className="bg-purple-500/20 hover:bg-purple-500/30 border-purple-500/30"
-          >
-            <i className="fas fa-cog mr-2"></i>
-            Admin
           </Button>
         </div>
       </div>

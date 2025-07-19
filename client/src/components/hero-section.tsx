@@ -24,15 +24,18 @@ export default function HeroSection() {
         <div className="max-w-4xl mx-auto">
           {/* Professional headshot with AI-inspired framing */}
           <div className="relative inline-block mb-8">
-            <div className="w-48 h-48 mx-auto rounded-full overflow-hidden border-4 border-cyan-400/30 animate-pulse-glow">
+            <div className="w-48 h-48 mx-auto rounded-full overflow-hidden ai-border-glow animate-pulse-glow">
               <img 
                 src={profileImagePath} 
                 alt="Arvind Gaba - Technology Leader" 
                 className="w-full h-full object-cover"
               />
             </div>
-            <div className="absolute -top-4 -right-4 w-16 h-16 bg-yellow-500 rounded-full flex items-center justify-center animate-float">
-              <i className="fas fa-robot text-slate-900 text-xl"></i>
+            <div className="absolute -top-4 -right-4 w-16 h-16 neural-gradient rounded-full flex items-center justify-center animate-float shadow-lg">
+              <i className="fas fa-brain text-white text-xl"></i>
+            </div>
+            <div className="absolute -bottom-2 -left-2 w-8 h-8 ai-gradient rounded-full flex items-center justify-center animate-pulse">
+              <i className="fas fa-microchip text-white text-sm"></i>
             </div>
           </div>
           

@@ -53,7 +53,7 @@ export class MemStorage implements IStorage {
           subtitle: "Deputy General Manager - IT",
           location: "Dubai, UAE",
           experience: "20+",
-          email: "arvindgaba@gmail.com",
+          email: "arvindgaba.ae+profile@gmail.com",
           phone: "+971 5634500",
           linkedin: "linkedin.com/in/arvindgaba"
         }
@@ -187,6 +187,48 @@ export class MemStorage implements IStorage {
             organization: "Dell Award - 2016",
             description: "Outstanding Service Delivery",
             icon: "award"
+          },
+          {
+            title: "Bronze Award Winner",
+            organization: "Dell - July 2012",
+            description: "Outstanding Team Performance",
+            icon: "award"
+          },
+          {
+            title: "$100M Revenue Milestone",
+            organization: "APJ Region - 2011",
+            description: "Key Contributor to Major Revenue Achievement",
+            icon: "trophy"
+          },
+          {
+            title: "India Sub-Region Lead",
+            organization: "Leadership Role - 2011",
+            description: "Regional Technology Leadership",
+            icon: "crown"
+          },
+          {
+            title: "IT Tech Wiz Award",
+            organization: "October 2010",
+            description: "Technical Excellence Recognition",
+            icon: "lightbulb"
+          },
+          {
+            title: "Best Performer",
+            organization: "UBS - May 2008 & 2009",
+            description: "Consecutive Years Excellence",
+            icon: "medal"
+          },
+          {
+            title: "Instant Karma Award",
+            organization: "Accenture - 2007",
+            description: "Best Quarterly Performance",
+            icon: "star"
+          },
+          {
+            title: "SME & Functional Lead",
+            organization: "Metrics & Reporting - 2013",
+            description: "Subject Matter Expert for Analytics",
+            icon: "chart-line"
           }
         ]
       }

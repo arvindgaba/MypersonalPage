@@ -16,6 +16,20 @@ export default function ExpertiseSection() {
       borderColor: "border-cyan-400/30"
     },
     {
+      title: "Azure Administrator",
+      subtitle: "Microsoft Certified Associate",
+      icon: "fab fa-microsoft",
+      color: "from-cyan-400/20 to-blue-600/20",
+      borderColor: "border-cyan-400/30"
+    },
+    {
+      title: "Microsoft 365",
+      subtitle: "Certified Fundamentals",
+      icon: "fab fa-microsoft",
+      color: "from-blue-600/20 to-purple-400/20",
+      borderColor: "border-blue-600/30"
+    },
+    {
       title: "ITIL v4 Foundation", 
       subtitle: "AXELOS Certified",
       icon: "fas fa-certificate",
@@ -23,18 +37,32 @@ export default function ExpertiseSection() {
       borderColor: "border-purple-400/30"
     },
     {
-      title: "Certified AI Expert",
-      subtitle: "Google AI & LLM",
-      icon: "fas fa-robot",
-      color: "from-yellow-500/20 to-blue-600/20",
+      title: "Leadership Program",
+      subtitle: "Foundations of Leadership",
+      icon: "fas fa-crown",
+      color: "from-yellow-500/20 to-purple-400/20",
       borderColor: "border-yellow-500/30"
+    },
+    {
+      title: "Systems Engineer",
+      subtitle: "Microsoft Certified",
+      icon: "fas fa-cogs",
+      color: "from-purple-400/20 to-cyan-400/20",
+      borderColor: "border-purple-400/30"
     },
     {
       title: "ISO 27001 & 20001",
       subtitle: "Security & Service Mgmt",
       icon: "fas fa-shield-alt",
-      color: "from-cyan-400/20 to-purple-400/20",
+      color: "from-cyan-400/20 to-yellow-500/20",
       borderColor: "border-cyan-400/30"
+    },
+    {
+      title: "Azure Fundamentals",
+      subtitle: "Microsoft Certified",
+      icon: "fas fa-cloud",
+      color: "from-yellow-500/20 to-blue-600/20",
+      borderColor: "border-yellow-500/30"
     }
   ];
 
@@ -75,15 +103,15 @@ export default function ExpertiseSection() {
           {/* Certifications */}
           <div className="glass-effect rounded-2xl p-8">
             <h3 className="text-2xl font-semibold mb-6 text-cyan-400">Professional Certifications</h3>
-            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
               {certifications.map((cert, index) => (
                 <div 
                   key={index}
-                  className={`bg-gradient-to-br ${cert.color} p-4 rounded-lg border ${cert.borderColor}`}
+                  className={`bg-gradient-to-br ${cert.color} p-3 rounded-lg border ${cert.borderColor}`}
                 >
-                  <i className={`${cert.icon} text-cyan-400 text-2xl mb-2`}></i>
-                  <h4 className="font-semibold text-slate-200">{cert.title}</h4>
-                  <p className="text-slate-400 text-sm">{cert.subtitle}</p>
+                  <i className={`${cert.icon} text-cyan-400 text-lg mb-2`}></i>
+                  <h4 className="font-semibold text-slate-200 text-sm">{cert.title}</h4>
+                  <p className="text-slate-400 text-xs">{cert.subtitle}</p>
                 </div>
               ))}
             </div>

@@ -24,7 +24,10 @@ export default function AwardsSection() {
       'lightbulb': 'fas fa-lightbulb',
       'medal': 'fas fa-medal',
       'users': 'fas fa-users',
-      'award': 'fas fa-award'
+      'award': 'fas fa-award',
+      'crown': 'fas fa-crown',
+      'star': 'fas fa-star',
+      'chart-line': 'fas fa-chart-line'
     };
     return iconMap[icon] || 'fas fa-trophy';
   };
@@ -53,16 +56,16 @@ export default function AwardsSection() {
           </p>
         </div>
         
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
           {awards?.map((award: any, index: number) => (
-            <div key={index} className="glass-effect rounded-2xl p-6 hover:bg-white/10 transition-all transform hover:scale-105">
+            <div key={index} className="glass-effect rounded-xl p-4 hover:bg-white/10 transition-all transform hover:scale-105">
               <div className="text-center">
-                <div className={`w-16 h-16 bg-gradient-to-br ${getGradientClass(index)} rounded-full flex items-center justify-center mx-auto mb-4`}>
-                  <i className={`${getIconClass(award.icon)} text-white text-2xl`}></i>
+                <div className={`w-12 h-12 bg-gradient-to-br ${getGradientClass(index)} rounded-full flex items-center justify-center mx-auto mb-3`}>
+                  <i className={`${getIconClass(award.icon)} text-white text-lg`}></i>
                 </div>
-                <h3 className="text-xl font-semibold text-cyan-400 mb-2">{award.title}</h3>
-                <p className="text-slate-400 text-sm mb-2">{award.organization}</p>
-                <p className="text-slate-300 text-sm">{award.description}</p>
+                <h3 className="text-lg font-semibold text-cyan-400 mb-2">{award.title}</h3>
+                <p className="text-slate-400 text-xs mb-2">{award.organization}</p>
+                <p className="text-slate-300 text-xs">{award.description}</p>
               </div>
             </div>
           ))}

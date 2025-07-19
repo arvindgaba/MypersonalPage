@@ -84,17 +84,17 @@ export default function ContactSection() {
                 </div>
                 <div>
                   <h4 className="font-semibold text-slate-200">Email</h4>
-                  <p className="text-slate-400">{personalData?.email || "arvindgaba@gmail.com"}</p>
+                  <p className="text-slate-400">{personalData?.email || "arvindgaba.ae+profile@gmail.com"}</p>
                 </div>
               </div>
               
               <div className="flex items-center">
                 <div className="w-12 h-12 ai-gradient rounded-lg flex items-center justify-center mr-4">
-                  <i className="fas fa-phone text-white"></i>
+                  <i className="fas fa-handshake text-white"></i>
                 </div>
                 <div>
-                  <h4 className="font-semibold text-slate-200">Phone</h4>
-                  <p className="text-slate-400">{personalData?.phone || "+971 5634500"}</p>
+                  <h4 className="font-semibold text-slate-200">Available for Contact</h4>
+                  <p className="text-slate-400">Professional Inquiries Welcome</p>
                 </div>
               </div>
               

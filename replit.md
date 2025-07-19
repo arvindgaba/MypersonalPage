@@ -7,6 +7,8 @@ This is a full-stack web application built as a personal portfolio and professio
 ## User Preferences
 
 Preferred communication style: Simple, everyday language.
+Content management: Admin panel removed for security - content updates via direct code editing only.
+Contact information: Email arvindgaba.ae+profile@gmail.com, phone number hidden for privacy.
 
 ## System Architecture
 
